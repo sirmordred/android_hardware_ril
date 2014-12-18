@@ -24,7 +24,11 @@
 #include <fcntl.h>
 #include <errno.h>
 
+#ifdef LEGACY_RIL
+#include "telephony/ril.h"
+#else
 #include <telephony/ril.h>
+#endif
 #define LOG_TAG "RILD"
 #include <utils/Log.h>
 #include <cutils/properties.h>

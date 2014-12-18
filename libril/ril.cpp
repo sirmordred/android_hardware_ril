@@ -19,7 +19,11 @@
 
 #include <hardware_legacy/power.h>
 
+#ifdef LEGACY_RIL
+#include "telephony/ril.h"
+#else
 #include <telephony/ril.h>
+#endif
 #include <telephony/ril_cdma_sms.h>
 #include <cutils/sockets.h>
 #include <cutils/jstring.h>
